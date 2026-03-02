@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
+        stage('Checkout') {
             steps {
-                git 'https://github.com/Ilakkiya182005/jenkins-demo.git'
+                git branch: 'main',
+                    url: 'https://github.com/Ilakkiya182005/jenkins-demo.git'
             }
         }
 
